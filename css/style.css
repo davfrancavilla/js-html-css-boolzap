@@ -218,6 +218,7 @@ body {
 .chat {
     height: calc(100% - 180px);
     background-color: #e5dcd5;
+    overflow-y: auto;
 }
 
 .message {
