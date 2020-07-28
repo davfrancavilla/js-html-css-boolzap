@@ -138,7 +138,7 @@ body {
     height: 70%;
     width: 95%;
     font-size: 18px;
-    border: 1px solid lightgray;
+    border: none;
     border-radius: 2px;
     padding: 10px;
 }
@@ -216,7 +216,7 @@ body {
 }
 
 .chat {
-    height: calc(100% - 190px);
+    height: calc(100% - 180px);
     background-color: #e5dcd5;
 }
 
@@ -245,6 +245,7 @@ body {
     position: absolute;
     bottom: 3px;
     right: 5px;
+    color: #b1b1b1;
 }
 
 .text.contact {
@@ -257,10 +258,29 @@ body {
     align-self: flex-end;
 }
 
-
-
-
 .create {
-    height: 100px;
-    background-color: gray;
+    height: 90px;
+    background-color: #f3eeea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;;
+}
+
+.create i {
+    color: #6b7376;
+    font-size: 34px;
+    padding: 0 30px;
+}
+
+.create input {
+    height: 60%;
+    width: 100%;
+    border: none;
+    border-radius: 2px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.create input:focus {
+    outline: none;
 }
