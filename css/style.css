@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.green-bar {
+    height: 15vh;
+    width: 100%;
+    background-color: #009788;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-x: scroll;
+    position: absolute;
+    padding: 20px;
+}
+
+
+.gradient-bg {
+    height: 85vh;
+    width: 100%;
+    background: rgb(209,219,220);
+    background: linear-gradient(0deg, rgba(209,219,220,1) 0%, rgba(221,218,209,1) 70%);
+}
+
+.app-container {
+    padding: 30px;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 80%;
+    min-width: 1200px;
+    height: 90%;
+}
+
+.view {
+    height: 100%;
+    width: 100%;
+}
+
+.left {
+    height: 100%;
+    width: 40%;
+    background-color: yellow;
+    float: left;
+}
+
+.right {
+    height: 100%;
+    width: 60%;
+    float: left;
+}
+
+.user-info {
+    height: 100px;
+    background-color: #eaeaea;
+}
+
+.notifications {
+    height: 100px;
+    background-color: #8edafc;
+}
+
+.search {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+}
+
+.search input {
+    height: 85%;
+    width: 95%;
+    font-size: 18px;
+}
+
+.users {
+    height: calc(100% - 240px);
+    overflow-y: scroll;
+}
+
+.user {
+    height: 100px;
+    background-color: green;
+    border: 1px solid black;
+}
+
+.chat-info {
+    height: 100px;
+    background-color: #eaeaea;
+}
+
+.chat {
+    height: calc(100% - 200px);
+    background-color: yellow;
+}
+
+.message {
+    height: 100px;
+    background-color: gray;
+}
