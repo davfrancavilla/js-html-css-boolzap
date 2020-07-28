@@ -74,17 +74,18 @@ body {
     background-color: #eaeaea;
 }
 
-.user-info>.commands{
+
+
+.user-info>.commands i,
+.chat-info>.right i {
+    margin-right: 20px;
     color: #b1b1b1;
     font-size: 24px;
-    margin-right: 30px;
 }
 
-.user-info>.commands i {
-    margin-left: 20px;
-}
 
-.user-info img {
+.user-info img,
+.chat-info img{
     border-radius: 50%;
     height: 60px;
 }
@@ -151,7 +152,7 @@ body {
     overflow-y: auto;
 }
 
-.user {
+.users>.user {
     padding: 10px 20px;
     height: 90px;
     background-color: white;
@@ -163,6 +164,7 @@ body {
 
 .user img {
     border-radius: 50%;
+    height: 70px;
     margin-right: 20px;
 }
 
@@ -173,6 +175,7 @@ body {
 
 .name-text p:first-of-type span:first-of-type{
     color: black;
+    font-size: 18px;
     margin-bottom: 5px;
 }
 
@@ -184,14 +187,80 @@ body {
 .chat-info {
     height: 90px;
     background-color: #eaeaea;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-info img {
+    margin-right: 20px;
+}
+
+.chat-info>.left{
+    display: flex;
+    align-items: center;
+}
+
+.chat-info>.left div p:first-of-type{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.chat-info>.left div p:last-of-type{
+    color: #b1b1b1;
+}
+
+.chat-info>.right {
+
 }
 
 .chat {
     height: calc(100% - 190px);
-    background-color: yellow;
+    background-color: #e5dcd5;
 }
 
 .message {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+.message:first-of-type .text{
+    margin-top: 30px;
+}
+
+
+.text {
+    position: relative;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.text .time {
+    font-size: 12px;
+    position: absolute;
+    bottom: 3px;
+    right: 5px;
+}
+
+.text.contact {
+    background-color: white;
+    align-self: flex-start;
+}
+
+.text.user {
+    background-color: #d5f9bb;
+    align-self: flex-end;
+}
+
+
+
+
+.create {
     height: 100px;
     background-color: gray;
 }
