@@ -21,6 +21,15 @@ function sendText(){
         clone.find('#text-time').text(time);
         $('.chat').append(clone);
         $('.message:last-of-type')[0].scrollIntoView();
-
+        setTimeout(function(){
+            var clone = $('.template .message').clone();
+            var time = new Date();
+            time = time.getHours() + ':' + time.getMinutes().toString().padStart(2, '0');
+            clone.addClass('contact');
+            clone.find('#text-content').text('Ciao');
+            clone.find('#text-time').text(time);
+            $('.chat').append(clone);
+            $('.message:last-of-type')[0].scrollIntoView();
+        },1000);
     }
 }
