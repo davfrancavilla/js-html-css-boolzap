@@ -224,39 +224,48 @@ body {
 .message {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding: 0 50px;
+    align-content: center;
 }
 
 .message:first-of-type .text{
     margin-top: 30px;
 }
 
+.message.contact {
+    justify-content: flex-start;
+}
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.message.contact .text {
+    background-color: white;
+}
+
+.message.user .text {
+    background-color: #d5f9bb;
+}
 
 .text {
     position: relative;
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 15px;
+    max-width: 40%;
 }
 
-.text .time {
+#text-content {
+    word-wrap: break-word;
+}
+
+#text-time {
     font-size: 12px;
     position: absolute;
     bottom: 3px;
     right: 5px;
     color: #b1b1b1;
-}
-
-.text.contact {
-    background-color: white;
-    align-self: flex-start;
-}
-
-.text.user {
-    background-color: #d5f9bb;
-    align-self: flex-end;
 }
 
 .create {
@@ -284,4 +293,8 @@ body {
 
 .create input:focus {
     outline: none;
+}
+
+.template {
+    display: none;
 }
