@@ -6,6 +6,7 @@ $(document).ready(function(){
     var name = $('.user:first').find('.users-list-name').text();
     $('#name').text(name);
 
+
     $('.user').on('click', function(){
         $('.user.active').removeClass('active');
         $(this).addClass('active');
@@ -18,7 +19,7 @@ $(document).ready(function(){
         $('.chat-info .left img').attr('src',img);
         var infoTime = $('.chat.active .message.contact:last-of-type').find('#text-time').text();
         if (infoTime == '') {
-            $('#time').text('17:53');
+            $('#time').text('17:10');
         } else {
             $('#time').text(infoTime);
         }
