@@ -5,29 +5,18 @@
 }
 
 body {
-    overflow: hidden;
     font-family: sans-serif;
 }
 
+
+/* sfondo verde */
 .green-bar {
     height: 15vh;
     width: 100%;
     background-color: #009788;
 }
 
-.container {
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow-x: scroll;
-    position: absolute;
-    padding: 20px;
-}
-
-
+/* sfondo gradiente */
 .gradient-bg {
     height: 85vh;
     width: 100%;
@@ -35,20 +24,29 @@ body {
     background: linear-gradient(0deg, rgba(209,219,220,1) 0%, rgba(221,218,209,1) 70%);
 }
 
+
+.container {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-x: scroll;
+    position: absolute;
+}
+
 .app-container {
     padding: 30px;
     position: absolute;
     top: 5%;
     left: 10%;
+    height: 90%;
     width: 80%;
     min-width: 1200px;
     max-width: 2500px;
-    height: 90%;
 }
 
 .view {
     height: 100%;
-    width: 100%;
 }
 
 .view>.left {
@@ -74,15 +72,12 @@ body {
     background-color: #eaeaea;
 }
 
-
-
 .user-info>.commands i,
 .chat-info>.right i {
     margin-right: 20px;
     color: #b1b1b1;
     font-size: 24px;
 }
-
 
 .user-info img,
 .chat-info img{
@@ -127,6 +122,7 @@ body {
 }
 
 .search {
+    position: relative;
     height: 40px;
     display: flex;
     justify-content: center;
@@ -137,14 +133,21 @@ body {
 .search input {
     height: 70%;
     width: 95%;
-    font-size: 18px;
+    font-size: 16px;
     border: none;
     border-radius: 2px;
     padding: 10px;
+    padding-left: 61px;
 }
 
 .search input:focus {
     outline: none;
+}
+
+.search i {
+    position: absolute;
+    left: 35px;
+    color: #b1b1b1;
 }
 
 .users {
@@ -160,6 +163,10 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+.users>.user:active {
+    background-color: lightgray;
 }
 
 .user img {
