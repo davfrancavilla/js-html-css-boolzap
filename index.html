@@ -39,15 +39,15 @@
                             <div class="user">
                                 <img src="https://picsum.photos/70" alt="user-avatar">
                                 <div class="name-text">
-                                    <p><span>Davide</span><span>17.53</span></p>
-                                    <p>Non poteva essere altrimenti</p>
+                                    <p><span class="users-list-name">Davide</span><span class="users-list-time">17:53</span></p>
+                                    <p class="users-list-text">Oggi è una bella giornata</p>
                                 </div>
                             </div>
                             <div class="user">
-                                <img src="https://picsum.photos/70" alt="user-avatar">
+                                <img src="https://picsum.photos/150" alt="user-avatar">
                                 <div class="name-text">
-                                    <p><span>Davide</span><span>17.53</span></p>
-                                    <p>Non poteva essere altrimenti</p>
+                                    <p><span class="users-list-name">Jacopo</span><span class="users-list-time">17:53</span></p>
+                                    <p class="users-list-text">Oggi è una bella giornata</p>
                                 </div>
                             </div>
                         </div>
@@ -56,10 +56,10 @@
                     <div class="right">
                         <div class="chat-info">
                             <div class="left">
-                                <img src="https://picsum.photos/70" alt="user-avatar">
+                                <img src="" alt="user-avatar">
                                 <div>
-                                    <p>Davide</p>
-                                    <p>Ultimo accesso oggi alle 15.40</p>
+                                    <p id="name"></p>
+                                    <p>Ultimo accesso oggi alle <span id="time">17:53</span></p>
                                 </div>
                             </div>
                             <div class="right">
@@ -68,7 +68,12 @@
                                 <i class="fas fa-ellipsis-v"></i>
                             </div>
                         </div>
-                        <div class="chat"></div>
+                        <!-- LISTA CHAT -->
+                        <div class="chat-list">
+                            <div class="chat"></div>
+                            <div class="chat"></div>
+                            <div class="chat"></div>
+                        </div>
                         <div class="create">
                             <i class="far fa-smile"></i>
                             <input type="text" placeholder="Scrivi un messaggio">
