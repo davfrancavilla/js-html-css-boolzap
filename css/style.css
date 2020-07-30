@@ -225,12 +225,12 @@ body {
 .chat-list {
     height: calc(100% - 180px);
     background-color: #e5dcd5;
-    overflow-y: auto;
 }
 
 .chat {
     display: none;
-    max-height: 100%;
+    height: 100%;
+    overflow-y: auto;
 }
 
 .chat.active {

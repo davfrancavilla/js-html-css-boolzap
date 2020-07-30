@@ -22,6 +22,7 @@ $(document).ready(function(){
         } else {
             $('#time').text(infoTime);
         }
+        $('.message:last-of-type')[0].scrollIntoView();
     });
 
 
