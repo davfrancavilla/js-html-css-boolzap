@@ -44,7 +44,8 @@ $(document).ready(function(){
 
         $('.user').each(function(){
                 var name = $(this).find('.users-list-name').text().toLowerCase();
-                if (name.includes(searchVal)) {
+                console.log(name);
+                if (contains(name,searchVal)) {
                     $(this).removeClass('hide');
                 } else {
                     $(this).addClass('hide');
@@ -83,4 +84,13 @@ function sendText(){
         },1000);
 
     }
+}
+
+function contains(array, element){
+    for (var i=0; i<array.length; i++) {
+        if (array.indexOf(element) != -1){
+            return true;
+        }
+    }
+    return false;
 }
