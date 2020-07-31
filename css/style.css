@@ -318,3 +318,13 @@ body {
 .template {
     display: none;
 }
+
+@media screen and (min-width: 1500px) {
+    .app-container {
+        top: 50%;
+        left: 50%;
+        height: 90%;
+        width: 80%;
+        transform: translate(-50%,-50%);
+    }
+}
