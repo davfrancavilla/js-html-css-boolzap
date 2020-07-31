@@ -44,7 +44,6 @@ $(document).ready(function(){
 
         $('.user').each(function(){
                 var name = $(this).find('.users-list-name').text().toLowerCase();
-                console.log(name);
                 if (contains(name,searchVal)) {
                     $(this).removeClass('hide');
                 } else {
