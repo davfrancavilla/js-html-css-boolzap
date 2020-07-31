@@ -26,10 +26,6 @@ $(document).ready(function(){
         $('.message:last-of-type')[0].scrollIntoView();
     });
 
-
-
-
-
     $('.message:last-of-type')[0].scrollIntoView();
     $('#send').click(sendText);
     $('.create input').keydown(function(event){
@@ -55,34 +51,35 @@ $(document).ready(function(){
 
 function sendText(){
     if ($('.create input').val() != ''){
-        var clone = $('.template .message').clone();
         var text = $('.create input').val();
-        var time = new Date();
-        time = time.getHours() + ':' + time.getMinutes().toString().padStart(2, '0');
+        createText(text,'user');
         $('.create input').val('');
-        clone.addClass('user');
-        clone.find('#text-content').text(text);
-        clone.find('#text-time').text(time);
-        $('.chat.active').append(clone);
-        $('.message:last-of-type')[0].scrollIntoView();
-        $('.user.active').find('.users-list-time').text(time);
-        $('.user.active').find('.users-list-text').text(text);
         setTimeout(function(){
-            var clone = $('.template .message').clone();
-            var text = 'Ciao';
-            var time = new Date();
-            time = time.getHours() + ':' + time.getMinutes().toString().padStart(2, '0');
-            clone.addClass('contact');
-            clone.find('#text-content').text(text);
-            clone.find('#text-time').text(time);
-            $('.chat.active').append(clone);
-            $('.message:last-of-type')[0].scrollIntoView();
-            $('.user.active').find('.users-list-time').text(time);
-            $('.user.active').find('.users-list-text').text(text);
+            createText('Ciao','contact');
+            var time = getTime();
             $('#time').text(time);
         },1000);
 
     }
+}
+
+function createText(text, className){
+    var clone = $('.template .message').clone();
+    var text = text;
+    var time = getTime();
+    clone.addClass(className);
+    clone.find('#text-content').text(text);
+    clone.find('#text-time').text(time);
+    $('.chat.active').append(clone);
+    $('.message:last-of-type')[0].scrollIntoView();
+    $('.user.active').find('.users-list-time').text(time);
+    $('.user.active').find('.users-list-text').text(text);
+}
+
+function getTime(){
+    var time = new Date();
+    time = time.getHours() + ':' + time.getMinutes().toString().padStart(2, '0');
+    return time;
 }
 
 function contains(array, element){
