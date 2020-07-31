@@ -165,6 +165,10 @@ body {
     align-items: center;
 }
 
+.users>.user.hide {
+    display: none;
+}
+
 .users>.user:hover {
     background-color: #e3e3e3;
 }

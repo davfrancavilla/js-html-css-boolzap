@@ -19,7 +19,7 @@ $(document).ready(function(){
         $('.chat-info .left img').attr('src',img);
         var infoTime = $('.chat.active .message.contact:last-of-type').find('#text-time').text();
         if (infoTime == '') {
-            $('#time').text('17:10');
+            $('#time').text('10:10');
         } else {
             $('#time').text(infoTime);
         }
@@ -38,6 +38,19 @@ $(document).ready(function(){
         }
     });
 
+
+    $('.search input').keyup(function(){
+        var searchVal = $('.search input').val().toLowerCase();
+
+        $('.user').each(function(){
+                var name = $(this).find('.users-list-name').text().toLowerCase();
+                if (name.includes(searchVal)) {
+                    $(this).removeClass('hide');
+                } else {
+                    $(this).addClass('hide');
+                }
+        });
+    });
 });
 
 function sendText(){
