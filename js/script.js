@@ -23,10 +23,9 @@ $(document).ready(function(){
         } else {
             $('#time').text(infoTime);
         }
-        $('.message:last-of-type')[0].scrollIntoView();
     });
 
-    $('.message:last-of-type')[0].scrollIntoView();
+    $('.chat.active .message:last-of-type')[0].scrollIntoView();
     $('#send').click(sendText);
     $('.create input').keydown(function(event){
         if (event.which == 13 || event.keyCode == 13 ) {
@@ -59,7 +58,6 @@ function sendText(){
             var time = getTime();
             $('#time').text(time);
         },1000);
-
     }
 }
 
@@ -71,7 +69,7 @@ function createText(text, className){
     clone.find('#text-content').text(text);
     clone.find('#text-time').text(time);
     $('.chat.active').append(clone);
-    $('.message:last-of-type')[0].scrollIntoView();
+    $('.chat.active .message:last-of-type')[0].scrollIntoView();
     $('.user.active').find('.users-list-time').text(time);
     $('.user.active').find('.users-list-text').text(text);
 }
